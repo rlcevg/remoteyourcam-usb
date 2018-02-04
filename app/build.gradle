@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 12
+    buildToolsVersion "27.0.3"
+
+    defaultConfig {
+        applicationId "com.remoteyourcam.usb"
+        minSdkVersion 12
+        targetSdkVersion 12
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard.cfg'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/acra-4.2.3-sources.jar')
+    compile files('libs/acra-4.2.3.jar')
+}
